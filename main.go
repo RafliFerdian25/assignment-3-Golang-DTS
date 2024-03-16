@@ -59,21 +59,21 @@ func getWeather(weather *Weather) *Weather {
 func printWaterStatus(water uint) {
 	switch {
 	case water <= 5:
-		fmt.Println("Status air : Aman")
-	case water <= 8:
-		fmt.Println("Status air : Siaga")
-	default:
-		fmt.Println("Status air : Bahaya")
+		fmt.Printf("Nilai Air: %d, Status : Aman\n", water)
+	case water >= 6 && water <= 8:
+		fmt.Printf("Nilai Air: %d, Status : Siaga\n", water)
+	case water > 8:
+		fmt.Printf("Nilai Air: %d, Status : Bahaya\n", water)
 	}
 }
 
 func printWindStatus(wind uint) {
 	switch {
 	case wind <= 6:
-		fmt.Println("Status angin : Aman")
-	case wind <= 15:
-		fmt.Println("Status angin : Siaga")
-	default:
-		fmt.Println("Status angin : Bahaya")
+		fmt.Printf("Nilai Angin: %d, Status : Aman\n", wind)
+	case wind >= 7 && wind <= 15:
+		fmt.Printf("Nilai Angin: %d, Status : Siaga\n", wind)
+	case wind > 15:
+		fmt.Printf("Nilai Angin: %d, Status : Bahaya\n", wind)
 	}
 }
